@@ -12,3 +12,7 @@
 
 -d = just deletes the branch if it clean
 -D = force deletes the branch
+
+3. U can merge a file from one branch to master using.
+
+>> git merge <branch-name>
