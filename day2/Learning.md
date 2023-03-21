@@ -16,3 +16,8 @@
 3. U can merge a file from one branch to master using.
 
 >> git merge <branch-name>
+
+4. This is from bfeature
+
+
+
