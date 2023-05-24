@@ -11,27 +11,33 @@
     <main>
 
         <h1>Stone, Paper, Scissor</h1>
-        <!-- Computer -->
         <section class="container">
+            <img src="../assets/Images/confetti.webp" class="confetti">
+        <!-- Computer -->
             <section>
-            <div class="image">
-                <img id="computer-image" src="../assets/Images/paper.png" >
-            </div>
+                <div class="image">
+                  <img id="computer-image" src="../assets/Images/paper.png" >
+                </div>
             <input class="scoreBoard computerScore" value="0"/>
             </section>
-            <div>
-                <button onclick="startGame()">Start</button>
-            </div>
+            
+        <!-- Start -->
+                <div>
+                   <button onclick="startGame()">Start</button>
+                 </div>
+
+        <!--User -->
             <section>
-            <div class="image">
-                <img id="user-image"src="../assets/Images/paper.png" >
-            </div>
-            <input class="scoreBoard userScore" value="0"/>
-            <select class="options">
+                <div class="image">
+                 <img id="user-image"src="../assets/Images/paper.png" >
+                </div>
+                 <input class="scoreBoard userScore" value="0"/>
+            <select class="options" >
                 <option value="stone">Stone</option>
                 <option value="paper">Paper</option>
                 <option value="scissors">Scissor</option>
             </select>
+
     <script src="../assets/script.js"></script>    
             </section>
         </section>

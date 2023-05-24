@@ -82,3 +82,10 @@ button:hover{
     border-radius: .2rem;
     color:wheat ;
 }
+
+.confetti{
+    position: absolute;
+    height: 80rem;
+    width: 100rem;
+    display: none;
+}

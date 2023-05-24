@@ -5,6 +5,16 @@ let computerImage = document.querySelector("#computer-image")
 let userScore = document.querySelector(".userScore")
 let computerScore = document.querySelector(".computerScore")
 let winner = document.querySelector(".winner");
+let confetti = document.querySelector(".confetti")
+    let cs = 0;
+    let us = 0;
+
+// Each key has his strong opponet as pair.
+let scoreCards = {
+    "stone": "paper",
+    "scissors": "stone",
+    "paper": "scissors",
+}
 
 let allValues = {
     0: "stone",
@@ -12,6 +22,9 @@ let allValues = {
     2: "scissors",
 }
 
+let chageImage = () =>{
+    userImage.src = `../assets/Images/${userSelected.value}.png`;
+}
 
 let startGame = () => {
     computerSelected = Math.floor(Math.random() * (3));
@@ -28,26 +41,11 @@ let startGame = () => {
         userScore.value = 0;
         computerScore.value = 0;
     }
-    if(userSelected.value == "stone"){
-        if(allValues[computerSelected] == "paper"){
-            computerScore.value++;
-        }else if(allValues[computerSelected] == "scissors"){
-            userScore.value++;
-        }else{
-        }
-    }else if(userSelected.value == "paper"){
-        if(allValues[computerSelected] == "scissors"){
-            computerScore.value++;
-        }else if(allValues[computerSelected] == "stone"){
-            userScore.value++;
-        }else{
-        }
+    if(userSelected.value == allValues[computerSelected]){
+
+    }else if(scoreCards[userSelected.value] == allValues[computerSelected]){
+        computerScore.value++;
     }else{
-        if(allValues[computerSelected] == "paper"){
-            userScore.value++;
-        }else if(allValues[computerSelected] == "stone"){
-            computerScore.value++;
-        }else{
-        }
+        userScore.value++;
     }
 }
