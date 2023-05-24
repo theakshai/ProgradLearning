@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: 'Poppins';
+}
+
+h1{
+    color: wheat;
+    text-align: center;
+}
+
+.winner{
+    color: wheat;
+    text-align: center;
+    margin-top: 4rem;
+}
+body{
+    background-color: cadetblue;
+}
+
+.image{
+    height: 8rem;
+    width: 8rem;
+    border: .1rem solid black;
+    border-radius: .4rem;
+    background-size: 8rem;
+}
+
+.user-image{
+    height: 8rem;
+    width: 8rem;
+    border: .1rem solid black;
+    border-radius: .4rem;
+    background-size: 8rem;
+}
+
+img{
+    height: 4rem;
+    width: 4rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.scoreBoard{
+    height: 2rem;
+    width: 6rem;
+    border: .1rem solid black;
+    background-color: cadetblue;
+    border-radius: .4rem;
+    outline: none;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: wheat;
+}
+
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9rem;
+    margin-top: 10rem;
+}
+
+button{
+    border-radius: .2rem;
+    background-color: cadetblue;
+    color: wheat;
+    border-color: black;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.options{
+    margin-left: 2rem;
+    width: 8rem;
+    background-color: cadetblue;
+    border: .1rem solid black;
+    border-radius: .2rem;
+    color:wheat ;
+}
