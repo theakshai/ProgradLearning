@@ -10,7 +10,7 @@ let confetti = document.querySelector(".confetti")
     let us = 0;
 
 // Each key has his strong opponet as pair.
-let scoreCards = {
+let strongWeakPair = {
     "stone": "paper",
     "scissors": "stone",
     "paper": "scissors",
@@ -22,7 +22,7 @@ let allValues = {
     2: "scissors",
 }
 
-let chageImage = () =>{
+let changeImage = () =>{
     userImage.src = `../assets/Images/${userSelected.value}.png`;
 }
 
@@ -36,6 +36,11 @@ let startGame = () => {
         userScore.value = 0;
         computerScore.value = 0;
     }
+    if(userScore.value ==  20 && computerScore.value == 20){
+        alert("The Game is Tied");
+        userScore.value = 0;
+        computerScore.value = 0;
+    }
     if(computerScore.value == 20){
         alert("Computer Won the Game");
         userScore.value = 0;
@@ -43,7 +48,7 @@ let startGame = () => {
     }
     if(userSelected.value == allValues[computerSelected]){
 
-    }else if(scoreCards[userSelected.value] == allValues[computerSelected]){
+    }else if(strongWeakPair[userSelected.value] == allValues[computerSelected]){
         computerScore.value++;
     }else{
         userScore.value++;
