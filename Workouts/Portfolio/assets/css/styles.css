@@ -1,0 +1,137 @@
+body{
+    background-color: #262625;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    align-content: center;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap:2rem
+}
+.about{
+    height: 12rem;
+    width: 20rem;
+    padding-top: 1rem;
+}
+
+.about:hover{
+    border: .2rem solid white;
+    border-radius: .8rem ;
+}
+
+.about p{
+    color: white;
+    text-align: center;
+    font-weight:500;
+}
+
+
+.about p:nth-child(1){
+    font-size: 4rem;
+}
+.about p:nth-child(3){
+    margin-top: 1rem;
+}
+
+
+hr{
+    color: #4285f4;
+    height: .2rem;
+}
+
+.container2{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.education p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.education h1, .skills h1, .projects h1, .clubs h1{
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.skills p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-bottom: .4rem;
+}
+
+
+.projects p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.education,.projects, .skills,.clubs{
+    height: 14rem;
+    width: 18rem;
+}
+.clubs p{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.about span, .education span, .projects span, .skills span,.clubs span{
+    color: #4285f4;
+}
+.education:hover, .skills:hover, .projects:hover, .clubs:hover{
+    box-shadow: .4rem .4rem  #f4b400;
+    transform: translateX(-5%) translateY(-5%);
+    border: .2rem solid white;
+    border-radius: .8rem ;
+}
+
+@media screen and (max-width:600px){
+    .container2{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1200px){
+.education,.projects, .skills,.clubs{
+    margin-left: 8em;
+}
+}
+
+@media screen and (max-width:300px){
+
+.about{
+    height: 20rem;
+    width: 14rem;
+}
+.education,.projects, .skills,.clubs{
+    height: 22rem;
+    width: 14rem;
+}
+
+}
