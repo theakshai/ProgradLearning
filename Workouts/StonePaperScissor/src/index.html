@@ -12,9 +12,9 @@
 
         <h1>Stone, Paper, Scissor</h1>
         <section class="container">
-            <img src="../assets/Images/confetti.webp" class="confetti">
         <!-- Computer -->
-            <section>
+            <section class="computer">
+                <p>Computer</p>
                 <div class="image">
                   <img id="computer-image" src="../assets/Images/paper.png" >
                 </div>
@@ -22,21 +22,22 @@
             </section>
             
         <!-- Start -->
+            <select class="options" onchange="changeImage()">
+                <option value="stone">Stone</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissor</option>
+            </select>
                 <div>
                    <button onclick="startGame()">Start</button>
                  </div>
 
         <!--User -->
-            <section>
+            <section class="user" >
+                <p>User</p>
                 <div class="image">
                  <img id="user-image"src="../assets/Images/paper.png" >
                 </div>
                  <input class="scoreBoard userScore" value="0"/>
-            <select class="options" >
-                <option value="stone">Stone</option>
-                <option value="paper">Paper</option>
-                <option value="scissors">Scissor</option>
-            </select>
 
     <script src="../assets/script.js"></script>    
             </section>
