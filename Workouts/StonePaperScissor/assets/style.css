@@ -7,6 +7,7 @@
 h1{
     color: wheat;
     text-align: center;
+    font-size: 4rem;
 }
 
 .winner{
@@ -16,6 +17,19 @@ h1{
 }
 body{
     background-color: cadetblue;
+}
+
+.computer p{
+    text-align: center;
+    color: wheat;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.user p{
+    text-align: center;
+    color: wheat;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .image{
@@ -56,11 +70,11 @@ img{
 
 .container{
     display: flex;
-    justify-content:center;
     align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 9rem;
     margin-top: 10rem;
+    gap:2rem
 }
 
 button{
@@ -83,9 +97,14 @@ button:hover{
     color:wheat ;
 }
 
-.confetti{
-    position: absolute;
-    height: 80rem;
-    width: 100rem;
-    display: none;
+@media screen and (max-width:600px){
+    .container{
+        flex-direction:column;
+        gap:2rem;
+    }
+
+    .options{
+        width:10rem;
+        margin-right: 2rem;
+    }
 }
