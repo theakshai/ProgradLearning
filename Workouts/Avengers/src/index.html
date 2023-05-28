@@ -1,1 +1,85 @@
-ECHO is on.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Avengers Infinity Stones Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Avengers Infinity Stones Tracker</h1>
+  
+  <h2>List of Infinity Stones:</h2>
+  <ul id="stone-list"></ul>
+  
+  <div id="map"></div>
+  
+  <h2>Character Tracker:</h2>
+  <ul id="character-list"></ul>
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Infinity Stones data
+    const infinityStones = [
+      { name: "Time Stone", location: { lat: 40.7128, lng: -74.0060 } },
+      { name: "Space Stone", location: { lat: 51.5074, lng: -0.1278 } },
+      { name: "Mind Stone", location: { lat: 48.8566, lng: 2.3522 } },
+      { name: "Reality Stone", location: { lat: 37.7749, lng: -122.4194 } },
+      { name: "Power Stone", location: { lat: -22.9068, lng: -43.1729 } },
+      { name: "Soul Stone", location: { lat: -34.6037, lng: -58.3816 } }
+    ];
+    
+    // Characters data
+    const characters = [
+      { name: "Iron Man", location: { lat: 40.7128, lng: -74.0060 } },
+      { name: "Captain America", location: { lat: 51.5074, lng: -0.1278 } },
+      { name: "Black Widow", location: { lat: 48.8566, lng: 2.3522 } },
+      { name: "Thor", location: { lat: 37.7749, lng: -122.4194 } },
+      { name: "Hulk", location: { lat: -22.9068, lng: -43.1729 } }
+    ];
+    
+    // Initialize Leaflet map
+    const map = L.map('map').setView([0, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Plot Infinity Stones on the map
+    infinityStones.forEach(stone => {
+      const marker = L.marker(stone.location).addTo(map);
+      marker.bindPopup(`<b>${stone.name}</b>`);
+    });
+    
+    // Display Infinity Stones in the list
+    const stoneList = document.getElementById('stone-list');
+    infinityStones.forEach(stone => {
+      const listItem = document.createElement('li');
+      listItem.textContent = stone.name;
+      stoneList.appendChild(listItem);
+    });
+    
+    // Display Characters in the list
+    const characterList = document.getElementById('character-list');
+    characters.forEach(character => {
+      const listItem = document.createElement('li');
+      listItem.textContent = character.name;
+      characterList.appendChild(listItem);
+    });
+    
+    // Simulating Thanos's movements
+    setInterval(() => {
+      const randomStone = infinityStones[Math.floor(Math.random() * infinityStones.length)];
+      const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
+      
+      if (confirm(`Thanos is near ${randomStone.name}!\nDeploy Avengers to save the stone?`)) {
+        alert(`The ${randomStone.name} is saved by deploying ${randomCharacter.name}!`);
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
