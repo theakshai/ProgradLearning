@@ -1,1 +1,38 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Generator</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body onload="initial()">
+
+    <section class="container">
+    <h1 style="text-align: center;">Captcha Generator ( Mid Range )</h1>
+    <section class="customization">
+        <div class="font">
+        <p >Font:</p>
+        <input type="color" id="font-color" value="#ffffff" onchange="changeFontColor()">
+        </div>
+        <div class="bg">
+        <p >Bg:</p>
+        <input type="color" id="bg-color" value="#ffffff" onchange="changeBgColor()">
+        </div>
+    </section>
+
+        <input type="text" value="#####" class="captcha" readonly>
+        <div class="verification">
+        <input type="text" placeholder="Enter the captcha here..." class="captcha-verify">
+        </div>
+        <div class="custom-btns">
+        <button class="check" onclick="verify()">Check</button>
+        <button class="refresh" onclick="refresh()">Refresh</button>
+        </div>
+
+    </section>
+    
+</body>
+<script src="../assets/script.js"></script>
+</html>
